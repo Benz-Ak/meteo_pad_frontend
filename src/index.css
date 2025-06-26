@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    list-style: none;
+}
+
+select, select::picker(select){
+    appearance:base-select ;
+}
+select{
+    background-color: transparent;
+    color:beige;
+    margin: 1rem;
+}
+
+select::picker(select){
+    border: 1px solid gray;
+    padding: .5rem;
+    background-color: rgba(245, 222, 179, 0.777);
+    border-radius: .5rem;
+}
+
+select option {
+    padding: .3rem 1rem;
+}
+select::checkmark{
+    display: none;
+}
