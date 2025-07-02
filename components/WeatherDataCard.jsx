@@ -13,7 +13,7 @@ export default function WeatherDataCard({ data }) {
   };
 
   return (
-    <div className="bg-transparent backdrop-blur-xl shadow-md rounded-lg p-4 text-gray-100 grid grid-cols-2 gap-4 w-[15rem]">
+    <div className="bg-transparent backdrop-blur-xl shadow-lg shadow-slate-900 hover:scale-110 duration-200 rounded-lg p-4 border border-slate-800 text-gray-100 grid grid-cols-2 gap-4 w-[10rem] aspect-square">
       <div
         className="flex flex-col items-center text-center"
         aria-label="Air temperature"

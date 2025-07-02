@@ -4,8 +4,9 @@ import React, { useState, useEffect, useRef } from "react";
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => {
-    setIsOpen((prev) =>!prev);
-  };  const location = useLocation();
+    setIsOpen((prev) => !prev);
+  };
+  const location = useLocation();
   const menuRef = useRef(null);
   // Close the menu when clicking outside of it
   // This effect adds an event listener to the document to handle clicks outside the menu
@@ -27,12 +28,18 @@ export default function Header() {
     document.title = `Meteo PAD - ${titles[location.pathname]}`;
   }, [location.pathname]);
   return (
-    <header className="bg-blue-900 sticky flex h-[70px] sticky z-10 top-0 justify-between items-center p-2 text-white">
+    <header className="bg-slate-900 flex h-[75px] sticky z-10 top-0 justify-between items-center p-2 text-white">
       <div>
-        <h1>Weather App</h1>
+        <figure className=" ">
+          <img
+            className="aspect-square w-11 rounded-full"
+            src="../src/assets/images/logo_pad.jpg"
+            alt=""
+          />
+        </figure>
         <p className="hidden md:block">Check the weather in your area</p>
       </div>
-      <nav className=" flex items-center w-1/2 flex justify-end">
+      <nav className=" flex items-center w-1/2  justify-end">
         {/*         burger menu for mobile view
          */}{" "}
         <button className="md:hidden ml-4" onClick={toggleMenu}>
