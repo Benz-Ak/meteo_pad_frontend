@@ -1,5 +1,7 @@
 import { useLocation, Link } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
+import logo from "../src/assets/images/logoPAD.jpg";
+
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,8 +34,8 @@ export default function Header() {
       <div>
         <figure className=" ">
           <img
-            className="aspect-square w-11 rounded-full"
-            src="../src/assets/images/logo_pad.jpg"
+            className="aspect-square w-11 rounded-lg"
+            src={logo}
             alt=""
           />
         </figure>
