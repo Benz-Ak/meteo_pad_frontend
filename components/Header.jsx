@@ -1,5 +1,5 @@
 import { useLocation, Link } from "react-router-dom";
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,7 +28,7 @@ export default function Header() {
     document.title = `Meteo PAD - ${titles[location.pathname]}`;
   }, [location.pathname]);
   return (
-    <header className="bg-slate-900 flex h-[75px] sticky z-10 top-0 justify-between items-center p-2 text-white">
+    <header className="bg-slate-900 flex h-[80px] sticky z-10 top-0 justify-between items-center px-2 py-4 text-white">
       <div>
         <figure className=" ">
           <img

@@ -3,13 +3,15 @@ import {
   FaMapMarkedAlt,
   FaExclamationTriangle,
 } from "react-icons/fa";
+import logo from "../src/assets/images/logoPAD.jpg";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#0f172a] via-[#1e293b] to-[#0f172a] text-gray-100 flex flex-col items-center justify-center p-8">
-      <header className="mb-16 text-center max-w-3xl">
-        <h1 className="text-5xl font-extrabold mb-4 drop-shadow-md">
-          Bienvenue sur MeteoExpert
+      <header className="mb-16 text-center flex flex-col items-center max-w-3xl">
+          <img src={logo} alt="" className="rounded-full mb-4 w-[50%] aspect-square"/>
+        <h1 className="text-3xl font-extrabold mb-4 drop-shadow-md">
+          Bienvenue sur MeteoMarinePAD
         </h1>
         <p className="text-lg text-gray-300 leading-relaxed">
           Votre source fiable pour les prévisions météorologiques détaillées,
@@ -23,12 +25,12 @@ export default function Home() {
         <FeatureCard
           icon={<FaCloudSun size={40} className="text-yellow-400" />}
           title="Prévisions Précises"
-          description="Consultez les prévisions météorologiques pour les jours à venir avec des données fiables et régulièrement mises à jour."
+          description="Consultez les prévisions météorologiques pour les jours à venir avec des données fiables  et régulièrement mises à jour."
         />
         <FeatureCard
           icon={<FaMapMarkedAlt size={40} className="text-cyan-400" />}
           title="Cartes Interactives"
-          description="Visualisez les stations météo sur une carte interactive pour mieux comprendre les conditions locales."
+          description="Visualisez les stations météo du PAD (SM1,SM2,SM3,SM4) sur une carte interactive pour mieux comprendre les conditions locales."
         />
         <FeatureCard
           icon={<FaExclamationTriangle size={40} className="text-red-500" />}
